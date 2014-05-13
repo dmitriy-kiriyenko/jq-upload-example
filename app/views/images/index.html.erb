@@ -1,1 +1,14 @@
 <h1>Gallery for <%= current_user.email %></h1>
+
+<hr />
+
+<%= form_for Image.new do |f| %>
+  <%= f.file_field :src %>
+  <%= f.submit 'Upload' %>
+<% end %>
+
+<hr />
+
+<% @images.each do |image| %>
+  <%= image_tag image.src.url %>
+<% end %>
