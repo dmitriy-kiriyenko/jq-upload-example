@@ -6,7 +6,7 @@ class ImagesController < ApplicationController
   end
 
   def create
-    params[:image][:src].each do |src|
+    Array(params[:image][:src]).each do |src|
       current_user.images.create! src: src
     end
     redirect_to root_url
