@@ -2,10 +2,12 @@
 
 <hr />
 
-<%= form_for Image.new do |f| %>
-  <%= f.file_field :src %>
-  <%= f.submit 'Upload' %>
-<% end %>
+<%= render 'jquery_file_upload/basic_plus_ui/upload' %>
+<%= render 'jquery_file_upload/basic_plus_ui/download' %>
+
+<%= render 'jquery_file_upload/basic_plus_ui/form', file: Image.new, as: :src %>
+
+<%= javascript_include_tag 'jquery-file-upload/basic-plus-ui' %>
 
 <hr />
 

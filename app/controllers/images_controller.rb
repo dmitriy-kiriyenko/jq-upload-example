@@ -6,7 +6,10 @@ class ImagesController < ApplicationController
   end
 
   def create
-    current_user.images.create! params[:image].permit(:src)
+    params[:image][:src].each do |src|
+      current_user.images.create! src: src
+    end
     redirect_to root_url
   end
+
 end
