@@ -1,0 +1,10 @@
+<%= link_to "<- See the gallery", root_path %>
+
+<hr />
+
+<%= render 'jquery_file_upload/basic_plus_ui/upload' %>
+<%= render 'jquery_file_upload/basic_plus_ui/download' %>
+
+<%= render 'jquery_file_upload/basic_plus_ui/form', file: @image, as: :src %>
+
+<%= javascript_include_tag 'jquery-file-upload/basic-plus-ui' %>

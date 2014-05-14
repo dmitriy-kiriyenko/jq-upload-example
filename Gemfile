@@ -8,6 +8,7 @@ gem 'sqlite3'
 
 gem 'devise'
 gem 'carrierwave'
+gem 'mini_magick'
 gem "fog", "~> 1.3.1"
 
 # Use SCSS for stylesheets
